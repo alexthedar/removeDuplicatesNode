@@ -31,7 +31,9 @@ function removeDuplicates(str){
   let finalArr = []
 
   for(let i = 0; i< stringArray.length; i++){
-    if (!testArr.includes(stringArray[i].toLowerCase())) {
+    if(stringArray[i] === ' '){
+      finalArr.push(stringArray[i])
+    } else if (!testArr.includes(stringArray[i].toLowerCase())) {
       testArr.push(stringArray[i].toLowerCase())
       finalArr.push(stringArray[i])
     }
