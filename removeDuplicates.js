@@ -27,10 +27,12 @@ function validate(str){
 
 function removeDuplicates(str){
   let stringArray = str.split('')
+  let testArr = []
   let finalArr = []
 
   for(let i = 0; i< stringArray.length; i++){
-    if (!stringArray.includes(stringArray[i].toLowerCase())) {
+    if (!testArr.includes(stringArray[i].toLowerCase())) {
+      testArr.push(stringArray[i].toLowerCase())
       finalArr.push(stringArray[i])
     }
   }
